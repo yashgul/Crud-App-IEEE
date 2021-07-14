@@ -1,0 +1,268 @@
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100vw;
+  padding: 15px;
+  background-color: #06d6a0;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;/*auto completed font by vs code*/
+  display: block;
+}
+
+.nav-head {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  right: 47px;
+}
+
+.left {
+  float: left;
+  width: auto;
+}
+
+.right {
+  float: right;
+}
+
+/* css for modals*/
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #f1f1f1;
+  border: none;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 10px 18px;
+  margin: 8px 0px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #f1f1f1;
+  border: none;
+}
+
+.tickbox {
+  position: relative;
+  top: 2px;
+}
+
+/* Add a background color when the inputs get focus */
+
+input[type=text]:focus, input[type=time]:focus, select:focus, input[type=number]:focus, input[type=date]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+select {
+  width: 100%;
+  padding: 9px 17px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background: #f1f1f1;
+  border: none;
+}
+
+.rating {
+  width: 38vw;
+}
+
+/*set styles for the cancel button*/
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #FF2E00;
+}
+
+/*float cancel and signup buttons and add an equal width*/
+
+/* buttons for sumbission and cancelling of the 3 modals*/
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%
+}
+
+
+/*add padding to container elements*/
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*to make elements in one line (vertically)*/
+.v-container {
+  display: flex;
+}
+
+.addpad {
+  padding: 16px;
+}
+
+/*in modals right and left cols just adding the margin and flex properties*/
+.spacing-right {
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.spacing-left {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.spacing {
+  margin-left: 20px;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+/*define the modal’s background*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+/*define the modal-content background*/
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/*making the button look prettier*/
+button {
+  background-color: #06d6a0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+/*sort button for records*/
+.filterbutton {
+  width: 100px;
+}
+
+.filterselect {
+  width: 200px;
+  height: 43px;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/*define the close button (red X to close modal)*/
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/*define the close hover and focus effects*/
+
+.close:hover, .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/*removing float affects*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*adding all extra space to the title col*/
+table .absorbing-column {
+  width: 100%;
+}
+
+/*table styling*/
+#records {
+  font-family: Arial, Helvetica, sans-serif;
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+
+#records td {
+  padding: .75em;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+#records-tr {
+  border-top: 1px gray;
+  background-color: white;
+}
+
+#records tr:hover {
+  background-color: #06d6a0;
+}
+
+#records th {
+  padding: .75em;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background-color: black;
+  color: white;
+}
+
+table {
+  border-spacing: 0px;
+  width: 100%;
+}
+

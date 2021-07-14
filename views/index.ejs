@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/signup.css">
+  </head>
+
+  <body>
+
+    <script src="/js/index.js"></script>
+
+    <div class="navbar">
+      <span class="nav-head">Movie Review System</span>
+    </div>
+
+    <div>
+      
+      <div class="v-container left">
+        <!v-container class for (flex) for making components in one line>
+
+
+          <button class="left" onclick="getdoc1()">New Review</button>
+          <!to open modal>
+
+          <button class="left" onclick="getdoc2()">Delete</button>
+
+          <button class="left" onclick="getdoc3()">Update</button>
+
+      </div>
+
+      <div class="v-container right">
+        <!sortby function right:classs to float right>
+          
+        <form action="/filter" method="POST">
+
+            <select class="filterselect" name="filterorder">
+
+              <option value="Genre">Genre</option>
+              <option value="Rating">Rating</option>
+              <option value="User">User</option>
+              <option value="Title">Title</option>
+
+            </select>
+
+            <button class="filterbutton" type="submit">Apply</button>
+          </form>
+
+
+      </div>
+
+    </div>
+
+    <div id="id01" class="modal">
+      <!form for new record>
+
+        <span onclick="docclose1()" class="close" title="Close Modal">×</span>
+         <! cross to close modal>
+
+          <form class="modal-content animate" action="/quotes" method="POST">
+
+            <div class="container addpad">
+
+
+              <div class="v-container ">
+
+                <div class="container spacing-right">
+
+                  <label><b>User</b></label>
+
+                  <input type="text" name="user" required placeholder="User Name">
+
+                </div>
+
+                <div class="container spacing-left">
+
+                  <label><b>Title</b></label>
+
+                  <input type="text" placeholder="Enter Password" name="title" required>
+
+                </div>
+
+              </div>
+
+              <div class="v-container ">
+
+                <div class="rating">
+
+                  <label><b>Rating</b></label>
+
+                  <input type="number" name="rating" required min=1 step=0.1 max=10>
+
+                </div>
+
+              </div>
+
+
+              <div class="v-container ">
+
+                <div>
+
+                  <b>Genre<b>
+
+                      <select name="genre">
+
+                        <option>Action</option>
+                        <option>Romance</option>
+                        <option>Thriller</option>
+                        <option>Horror</option>
+                        <option>Sci-Fi</option>
+
+                      </select>
+
+                </div>
+
+                <div class="spacing">
+
+                  <label><b>Reccomendation</b></label>
+
+                  <span>
+
+                    <select name="reccomend">
+
+                      <option>Yes</option>
+                      <option>No</option>
+
+                    </select>
+
+                  </span>
+
+                </div>
+
+              </div>
+
+              <div class="clearfix v-container">
+
+                <button type="button" onclick="docclose1()" class="cancelbtn">Cancel</button>
+
+                <button type="submit" class="signupbtn">Sign Up</button>
+
+              </div>
+
+            </div>
+
+          </form>
+
+    </div>
+
+
+    <div id="id02" class="modal">
+
+      <span onclick="docclose2()" class="close" title="Close Modal">×</span>
+
+      <form class="modal-content animate" action="/delete" method="POST">
+
+        <div class="container addpad">
+
+          <div class="v-container ">
+
+            <div class="container spacing-right">
+
+              <label><b>Title</b></label>
+
+              <input type="text" name="titledelete" placeholder="Title Name">
+
+            </div>
+
+          </div>
+
+          <div class="clearfix v-container">
+
+            <button type="button" onclick="docclose2()" class="cancelbtn">Cancel</button>
+
+            <button type="submit" class="signupbtn">Sign Up</button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+
+    <div id="id03" class="modal">
+
+      <span onclick="docclose3()" class="close" title="Close Modal">×</span>
+
+      <form class="modal-content animate" action="/update" method="POST">
+
+        <div class="container addpad">
+
+          <div class="v-container ">
+
+            <div class="container spacing-right">
+
+              <label><b>Original Title</b></label>
+
+              <input type="text" name="titleorig" placeholder="Original Title Name">
+
+            </div>
+
+          </div>
+
+          <h2>New Attributes</h2>
+
+          <div class="v-container ">
+
+            <div class="container spacing-right">
+
+              <label><b>User</b></label>
+              <input type="text" name="userupdate" placeholder="Enter new user">
+
+            </div>
+
+            <div class="container spacing-left">
+
+              <label><b>Title</b></label>
+              <input type="text" placeholder="Enter new Title" name="titleupdate">
+
+            </div>
+
+          </div>
+
+          <div class="v-container ">
+
+            <div class="rating">
+
+              <label><b>Rating</b></label>
+
+              <input type="number" name="ratingupdate" required min=1 step=0.1 max=10>
+
+            </div>
+
+          </div>
+
+          <div class="v-container ">
+
+            <div>
+
+              <b>Genre<b>
+                
+                  <select name="genreupdate">
+
+                    <option>Action</option>
+                    <option>Romance</option>
+                    <option>Thriller</option>
+                    <option>Horror</option>
+                    <option>Sci-Fi</option>
+
+                  </select>
+
+            </div>
+
+            <div class="spacing">
+
+              <label><b>Reccomendation</b></label>
+
+              <span>
+
+                <select name="reccomendupdate">
+
+                  <option>Yes</option>
+                  <option>No</option>
+
+                </select>
+
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="clearfix v-container">
+
+            <button type="button" onclick="docclose3()" class="cancelbtn">Cancel</button>
+
+            <button type="submit" class="signupbtn">Sign Up</button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+    <table id="records">
+      <!table to display items>
+
+        <tr>
+
+          <th>#</th>
+          <th>User</th>
+          <th class="absorbing-column">Title</th>
+          <th>Rating</th>
+          <th>Genre</th>
+          <th>Reccomendation</th>
+
+        </tr>
+
+        <% for(var i=0; i < quotes.length; i++) {%>
+          <! getting from database and loopig through>
+            <tr>
+
+              <td>
+                <%=i+1%>
+              </td>
+
+              <td>
+                <%= quotes[i].user %>
+              </td>
+
+              <td>
+                <%= quotes[i].title %>
+              </td>
+
+              <td>
+                <%= quotes[i].rating %>
+              </td>
+
+              <td>
+                <%= quotes[i].genre %>
+              </td>
+
+              <td>
+                <%= quotes[i].reccomend %>
+              </td>
+
+            </tr>
+            <% } %>
+
+    </table>
+
+  </body>
+
+</html>
