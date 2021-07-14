@@ -2,3 +2,4 @@ https://www.w3schools.com/css/css_table.asp - table css
 https://www.w3schools.com/howto/howto_css_signup_form.asp - signupform css
 https://stackoverflow.com/questions/11553768/remove-table-row-after-clicking-table-row-delete-button
 https://zellwk.com/blog/crud-express-mongodb/
+The basic structure of the modals was copied from somewhere but i can't find it now bu most of it got changed anyways so hopefull it's fine
